@@ -1,5 +1,4 @@
-## Understanding of async in at it's  foundation aand implentation 
-## in the most basic form  
+## Understanding of async in at it's  foundation aand implentation  in the most basic form  
 Like me you probably are also used to the perharps the most used and famous model of wrting and running code , which is in the sequential manner. it is how i was thought about algorithms . the idea that the computer understood the instructions in this way and how it has to evaluate code line bt line, The sequential way. But for other purposes that you may want to run code differently. you may want your instructions to be performed in a different manner and not the regular sequential way which requires tht one process be done before another can start. 
 for this reason we could write our code in a different manner using a different model \. we could implement an asynchronous solution and this will have a whole new effect on how our code runs and how task is accomplished. 
 And what this means basically is instead of our code running in a way we are used to that is each process running after the other to an eextent , making the process asychronous will have our process happen side by side so as to say.
