@@ -18,6 +18,16 @@ so lets considder it
 in the most basoc level , what we need is acheduler , which shall be an object.
 we shall define a scheduler class in python with some properties and methods which will help cordinate our functions or actions in a way that will reflect concurrency ,
 
-our
+Now our scheduler class , soon to turn object shall have properties like a `ready queue`(we couldd use a list to make things simple), and another queue called `sleeping`.
+we shall also have a few methods in this case . we could add a method called `call_net` and `call_later` and a `run` method.
+
+Now i shall explain what these properties and functions do while at the same time explaining how this scheduler object can help run processees concurrently.
+
+the `ready` queue shall contain all processes or functions that are ready to run, the `sleeping` queue shall contain process that are not ready to run.a delay perharps or lag.  the `call_next` method shall append processes/functions into the ready queue to be run and the `call_later` shall schedule fucntions to be run when ready . Now the driving force of this concept and how we can prevent one process from interferring with the othet allowing these processes to run side by side is the `run` method in the scheduler object . 
+
+the `run` method is implemented as a while loop that checks the ready and sleeping queue in each iteration . if there is nothing in the ready queue , that is if there are no functions to run. we check the sleeping queue and pop out a process  which is likely to be ready soon . wait for it to be ready then append it to the ready queue.  the run method on each iterarion runs and process provided there are some in the ready queue.
+the idea of having a sleeping queue which is sorted according to which function or process is done first allows the delay of certain process not to affect the others . they get run as at the time ther are ready .
+
+ecample , if you have two processes being cordinatted our scheduler object . supposed one takes 1 second to complete each step of its task and the other 5secs . that means te first one completes in 5 seconds  5 tasks and i the same time the second one does one task . no waiting happens . the happen withing the same 5 seconds side by side .
 
 
