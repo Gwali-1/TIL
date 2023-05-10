@@ -26,9 +26,6 @@ The `ready` queue shall contain all processes or functions that are ready to run
 
 
 
-
-
-
 ### sleeping queue
 The `sleeping` queue shall contain process that are not ready to run.a delay perharps or lag.
 
